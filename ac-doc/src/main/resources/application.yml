@@ -1,0 +1,16 @@
+server:
+  port: 19081
+knife4j:
+  enableAggregation: true
+  nacos:
+    enable: true
+    serviceUrl: http://127.0.0.1:8848/nacos/
+    routes:
+      - name: 用户模块
+        serviceName: ac-user-server
+        location: /v2/api-docs?group=default
+        servicePath: /
+      - name: 订单模块
+        serviceName: ac-order-server
+        location: /v2/api-docs?group=default
+        servicePath: /
